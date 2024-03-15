@@ -16,7 +16,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { useState, useEffect } from 'react';
 import axios, { AxiosError } from 'axios';
 import Cookies from 'js-cookie';
-import { redirect } from 'next/navigation';
+import Router from 'next/router';
 
 export function LoginForm() {
   const [apiMessage, setApiMessage] = useState<string | null>(null);
@@ -86,7 +86,8 @@ export function LoginForm() {
         secure: true,
         httpOnly: true,
       });
-      redirect('/');
+      console.log(Cookies.get('token'));
+      Router.push('/');
     } catch (error) {
       setApiMessage('Erreur lors de la connexion: ' + error);
       setApiMessageType('error');

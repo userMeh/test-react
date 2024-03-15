@@ -109,8 +109,6 @@ export function RegisterForm() {
         profileType: profileStatus,
       });
 
-      console.log(response);
-
       if (response.status === 201) {
         setApiMessage('Votre profil a bien été créé');
         setApiMessageType('success');

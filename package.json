@@ -7,7 +7,7 @@
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
-    "sass:watch": "sass --watch app/globals.scss:app/globals.css"
+    "sass:watch": "sass --watch app/styles.scss:app/styles.css"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"commonjs\"} prisma/seed.ts"
